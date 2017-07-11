@@ -2,6 +2,8 @@
 
 set -o pipefail
 exitCode=0
+IOS_SDK=${IOS_SDK:-"iphonesimulator10.3"}
+IOS_DESTINATION=${IOS_DESTINATION:-"OS=10.3.1,name=iPhone 7"}
 
 function checkStatus {
     if [[ $exitCode == 0 && $1 != 0 ]]; then
